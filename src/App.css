@@ -187,8 +187,15 @@ footer {
   margin: 0 0 10px
 }
 
-.cia {
-  text-align: center
+.phs {
+  text-align: center;
+}
+
+
+.img-phs {
+  text-align: center;
+  max-width: 103px;
+  max-height: 113px;
 }
 
 .redes {

@@ -1,14 +1,10 @@
 import { useState, useEffect } from 'react';
-import reactLogo from './assets/react.svg';
-import bannerImageComputer from './assets/banner-barueri.png';
-import bannerImageMobile from './assets/banner-barueri-m.jpeg';
+import bannerImageComputer from './assets/fundo.jpg';
 import logoVitta from './assets/logo-vitta-nobre.svg';
 import jsafraLogo from './assets/jsafra.svg';
-import mindoMaisVitta from './assets/mindo-mais-vita.png';
-import ciaLogo from './assets/cia.png';
+import phsLogo from './assets/phs-logo.png';
 import facebookIcon from './assets/Facebook.svg';
 import instagramIcon from './assets/Instagram.svg';
-import youtubeIcon from './assets/Youtube.svg';
 import './App.css';
 
 function App() {
@@ -27,7 +23,7 @@ function App() {
     console.log("window.innerWidth <= 768", window.innerWidth <= 768);
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setBannerImage(bannerImageMobile);
+        setBannerImage(bannerImageComputer);
       } else {
         setBannerImage(bannerImageComputer);
       }
@@ -43,19 +39,17 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    const message = `Novo Cadastro:
+    const message = `Ola, eu venho através do site da phs e tenho interesse em saber mais sobre o vitta barueri, meus dados para cadastro:
     Nome: ${nome}
     E-mail: ${email}
     Telefone: ${telefone}
-    WhatsApp: ${checkbox.whatsapp ? 'Sim' : 'Não'}
-    Telefone: ${checkbox.telefoneCheck ? 'Sim' : 'Não'}
-    E-mail: ${checkbox.emailCheck ? 'Sim' : 'Não'}`;
+    Aceito receber mensagens via WhatsApp: ${checkbox.whatsapp ? 'Sim' : 'Não'}
+    Aceito receber ligações e sms via Telefone: ${checkbox.telefoneCheck ? 'Sim' : 'Não'}
+    Aceito receber informações via E-mail: ${checkbox.emailCheck ? 'Sim' : 'Não'}`;
   
     const encodedMessage = encodeURIComponent(message);
-  
-    alert("Clique em 'Iniciar conversa' para enviar a mensagem!");
-  
-    window.location.href = `https://wa.me/5511983006699?text=${encodedMessage}`;
+    
+    window.location.href = `https://wa.me/5511934061572?text=${encodedMessage}`;
   };
 
   const handleCheckboxChange = (e) => {
@@ -196,33 +190,23 @@ function App() {
           </figure>
         </div>
         <div className="selos">
-          <div className="vitta">
+          <div>
+            <p>Imobiliaria parceira</p>
             <figure>
-              <img src={mindoMaisVitta} alt="Mundo mais Vitta" />
-            </figure>
-          </div>
-          <div className="cia">
-            <p>Coordenação de vendas</p>
-            <figure>
-              <img src={ciaLogo} alt="Cia" />
+              <img src={phsLogo} alt="phs" className="img-phs"/>
             </figure>
           </div>
           <div className="redes">
             <p>Conheça nossas redes sociais</p>
             <ul>
               <li>
-                <a href="#" title="Facebook">
+                <a href="https://www.facebook.com/phs.negociosimob/" title="Facebook" target="_blank">
                   <img src={facebookIcon} alt="Facebook" />
                 </a>
               </li>
               <li>
-                <a href="#" title="Instagram">
+                <a href="https://www.instagram.com/phs.negociosimob/" title="Instagram" target="_blank">
                   <img src={instagramIcon} alt="Instagram" />
-                </a>
-              </li>
-              <li>
-                <a href="#" title="YouTube">
-                  <img src={youtubeIcon} alt="YouTube" />
                 </a>
               </li>
             </ul>
