@@ -20,7 +20,6 @@ function App() {
   });
 
   useEffect(() => {
-    console.log("window.innerWidth <= 768", window.innerWidth <= 768);
     const handleResize = () => {
       if (window.innerWidth <= 768) {
         setBannerImage(bannerImageComputer);
@@ -193,7 +192,9 @@ function App() {
           <div>
             <p>Imobiliaria parceira</p>
             <figure>
-              <img src={phsLogo} alt="phs" className="img-phs"/>
+              <a href="https://www.imoveisphs.com.br" target="_blank">
+                <img src={phsLogo} alt="phs" className="img-phs"/>  
+              </a>
             </figure>
           </div>
           <div className="redes">
