@@ -190,7 +190,7 @@ function App() {
         </div>
         <div className="selos">
           <div>
-            <p>Imobiliaria pioneira</p>
+            <p>Imobiliaria parceira</p>
             <figure>
               <a href="https://www.imoveisphs.com.br" target="_blank">
                 <img src={phsLogo} alt="phs" className="img-phs"/>  
